@@ -1,38 +1,155 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edukacyjny.net - Blog edukacyjny</title>
-    <link rel="stylesheet" href="style.css">
+    <title>P4KidsParty - Dmuchane Zamki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fdfdfd;
+            color: #333;
+        }
+        header {
+            background: #ffd400;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .btn {
+            background: #ff5c5c;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .section {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .offers, .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .card {
+            background: white;
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            width: 250px;
+        }
+        .cta {
+            background: #90cdf4;
+            padding: 2rem;
+            text-align: center;
+        }
+        footer {
+            background: #ffd400;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            nav { flex-direction: column; }
+            .offers, .gallery { flex-direction: column; align-items: center; }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Witaj na Edukacyjny.net</h1>
-        <p>Blog edukacyjny wspierający Twój rozwój</p>
+        <div><strong>P4KidsParty</strong></div>
+        <nav>
+            <a href="#oferta">Oferta</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#opinie">Opinie</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+        <a href="#kontakt" class="btn">Zarezerwuj zamek</a>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Strona Główna</a></li>
-            <li><a href="#">Artykuły</a></li>
-            <li><a href="#">O nas</a></li>
-            <li><a href="#">Kontakt</a></li>
-        </ul>
-    </nav>
+    <section class="hero">
+        <h1>Wynajem Dmuchanych Zamków dla Dzieci</h1>
+        <p>Zrób z każdej okazji niezapomnianą przygodę!</p>
+        <a href="#oferta" class="btn">Zobacz ofertę</a>
+    </section>
 
-    <main>
-        <article>
-            <h2>Pierwszy wpis na blogu</h2>
-            <p>Witaj na naszym blogu edukacyjnym! Już wkrótce znajdziesz tutaj ciekawe artykuły, porady i recenzje.</p>
-            <p>Śledź nas, aby być na bieżąco!</p>
-        </article>
-    </main>
+    <section class="section" id="oferta">
+        <h2>Nasza Oferta</h2>
+        <div class="offers">
+            <div class="card">
+                <h3>🎉 Zamek Księżniczki</h3>
+                <p>Idealny na urodziny!</p>
+                <strong>Cena: 300 zł / dzień</strong>
+            </div>
+            <div class="card">
+                <h3>🦖 Dino Zamek</h3>
+                <p>Przygoda w prehistorii!</p>
+                <strong>Cena: 320 zł / dzień</strong>
+            </div>
+            <div class="card">
+                <h3>🚀 Skocznia Kosmiczna</h3>
+                <p>Dla małych astronautów!</p>
+                <strong>Cena: 350 zł / dzień</strong>
+            </div>
+            <div class="card">
+                <h3>🌊 Zjeżdżalnia Wodna</h3>
+                <p>Idealna na lato!</p>
+                <strong>Cena: 400 zł / dzień</strong>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="galeria">
+        <h2>Galeria</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/250x150" alt="Zamek 1">
+            <img src="https://via.placeholder.com/250x150" alt="Zamek 2">
+            <img src="https://via.placeholder.com/250x150" alt="Zamek 3">
+        </div>
+    </section>
+
+    <section class="section" id="opinie">
+        <h2>Opinie Klientów</h2>
+        <p>"Super atrakcja! Dzieci były zachwycone!" – Anna</p>
+        <p>"Wszystko na czas, bardzo miła obsługa!" – Marek</p>
+    </section>
+
+    <section class="cta" id="kontakt">
+        <h2>Gotowi na super zabawę?</h2>
+        <p>Skontaktuj się z nami i zarezerwuj termin!</p>
+        <a href="tel:+48123456789" class="btn">Zadzwoń teraz</a>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Edukacyjny.net - Wszelkie prawa zastrzeżone.</p>
+        © 2025 P4KidsParty | kontakt@p4kidsparty.pl | Facebook | Instagram
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
